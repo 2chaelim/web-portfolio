@@ -8,7 +8,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png" />
     <link rel="stylesheet" href="./css/my_reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/intro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/slide.css" />
     <script src="/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -52,7 +59,7 @@
                 <li></li>
                 <li></li>
                 <li>
-                  <input type="color" id="color_picker" onchange="changeTextColor()"/><img
+                  <input type="color" id="color_picker" /><img
                     src="./img/colorpicker_stroke.png"
                     alt="colorpiker"
                     class="colorpicker"
@@ -83,7 +90,11 @@
             </ul>
           </div>
           <div class="brief">
-            <p>잘 구성된 와이어 프레임 위에 디자인을 입히듯<br><span>꼼꼼한 마크업</span>을 바탕으로 <span>편안하고 용이한 UI</span>를 개발합니다.</p>
+            <p>
+              잘 구성된 와이어 프레임 위에 디자인을 입히듯<br /><span
+                >꼼꼼한 마크업</span
+              >을 바탕으로 <span>편안하고 용이한 UI</span>를 개발합니다.
+            </p>
             <p>코드도 디자인해야죠, 보기 좋고 쓰기 좋게!</p>
           </div>
         </div>
@@ -100,14 +111,14 @@
             <li class="skills">
               <p>Skills</p>
               <ul>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
-                <li>icon</li>
+                <li><img src="./img/html.png" alt="html" /></li>
+                <li><img src="./img/css.png" alt="css" /></li>
+                <li><img src="./img/js.png" alt="js" /></li>
+                <li><img src="./img/node.png" alt="node" /></li>
+                <li><img src="./img/react.png" alt="react" /></li>
+                <li><img src="./img/figma.png" alt="figma" /></li>
+                <li><img src="./img/ps.png" alt="ps" /></li>
+                <li><img src="./img/ai.png" alt="ai" /></li>
               </ul>
             </li>
             <li class="job">
@@ -115,6 +126,98 @@
               <span>Freelance Designer, 2years</span>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="sec_portfolio">
+        <p class="port_title mw">Portfolio</p>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+            <div class="slide">
+              <p>chaelim web-portfolio</p>
+            </div>
+          </div>
+        </div>
+        <ul class="pf">
+          <li class="sul">
+            <a href="#">술담화</a>
+            <div class="port_desc">
+              <p>구독서비스 사이트 리뉴얼</p>
+              <span>#expo</span>
+              <span>#mobile-app</span>
+            </div>
+          </li>
+          <li class="illhwa">
+            <a href="#">Tokyo Inside;<br />우리들의 일화</a>
+            <div class="port_desc">
+              <p>일본어 회화 학습 어플리케이션</p>
+              <span>#expo</span>
+              <span>#mobile-app</span>
+            </div>
+          </li>
+          <li class="mapsmart">
+            <a href="#">MAPSMART</a>
+            <div class="port_desc">
+              <p>[chatGPT] 장소 추천 서비스 앱</p>
+              <span>#expo</span>
+              <span>#mobile-app</span>
+            </div>
+          </li>
+          <li class="daejeon">
+            <a href="#">대전시민천문대</a>
+            <div class="port_desc">
+              <p>대전시민천문대 사이트 리뉴얼</p>
+              <span>#expo</span>
+              <span>#mobile-app</span>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper mySwiper design_work">
+          <p class="design_title mw">그 외 디자인 작업물</p>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
     </div>

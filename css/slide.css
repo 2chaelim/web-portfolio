@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}
+.slider {
+  border-top: 1px solid #656565;
+  border-bottom: 1px solid #656565;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  /* -webkit-animation: scroll 25s linear infinite;
+  animation: scroll 25s linear infinite; */
+  animation-name: scroll;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: flex;
+  width: calc(250px * 12);
+}
+.slider .slide {
+  padding: 1rem 2rem;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #656565;
+  font-weight: 500;
+  font-style: italic;
+}
+.slider .slide:nth-child(2n) {
+  font-weight: 300;
+  font-style: italic;
+}
