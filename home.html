@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./css/my_reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/intro.css" />
+    <link rel="stylesheet" href="./css/slide.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/slide.css" />
-    <script src="/common.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/common.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -204,22 +204,71 @@
             </div>
           </li>
         </ul>
-        <div class="swiper mySwiper design_work">
-          <p class="design_title mw">그 외 디자인 작업물</p>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+        <div class="design_work">
+          <div class="design_title mw">
+            <p>그 외 디자인 작업물</p>
+            <img src="./img/arrow_bottom.png" alt="arrow" />
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/jdEnt_card.png" alt="logo_jdEnt" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/ilsang_idCard.png" alt="logo_ilsang" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/sticker_pack.png" alt="goods_flex" />
+              </div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+          </div>
+          <div class="swiper-button-next next">
+            <img src="./img/next.png" alt="next" />
+          </div>
+          <div class="swiper-button-prev prev">
+            <img src="./img/prev.png" alt="prev" />
+          </div>
         </div>
       </section>
+      <footer class="ft">
+        <p class="contact_title mw">Contact</p>
+        <ul class="contact_con mw">
+          <li class="contact_con_li">
+            <p><span>Kakao</span>charry8540</p>
+          </li>
+          <li class="contact_con_li">
+            <p><span>Slack</span>slackslackslack</p>
+          </li>
+          <li class="contact_con_li">
+            <p><span>E-mail</span>charry8540@gmail.com</p>
+          </li>
+        </ul>
+        <ul class="icon_set mw">
+          <li>
+            <a href=""><img src="./img/github.png" alt="github" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/figma.png" alt="figma" /></a>
+          </li>
+        </ul>
+        <p class="copy mw">
+          본 홈페이지는 가로 1920px PC화면에 최적화 되었으며 반응형이 적용되어
+          있습니다.<br />© 2023 ChaeLim Portfolio
+        </p>
+        <div class="bg_box">
+          <span class="window_size">1920 x 1080</span>
+          <span class="circle"></span>
+          <img src="./img/auto_guide.png" alt="auto_guide" />
+          <img src="./img/auto_guide.png" alt="auto_guide" />
+          <img src="./img/auto_guide.png" alt="auto_guide" />
+        </div>
+      </footer>
     </div>
   </body>
 </html>
