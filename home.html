@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chaelim Portfolio</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/my_reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/intro.css" />
     <link rel="stylesheet" href="./css/slide.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script src="/common.js" defer></script>
   </head>
   <body>
@@ -129,6 +141,104 @@
         </div>
       </section>
       <section class="sec_portfolio">
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="title_img">
+                  <p>리뉴얼 프로젝트</p>
+                  <p>술담화</p>
+                </div>
+                <div class="int">
+                  <ul class="pro_per">
+                    <li>
+                      <img src="./img/sul_per1.png" alt="per" />
+                      <span>기획</span>
+                    </li>
+                    <li>
+                      <img src="./img/sul_per2.png" alt="per" />
+                      <span>디자인</span>
+                    </li>
+                    <li>
+                      <img src="./img/sul_per3.png" alt="per" />
+                      <span>코딩</span>
+                    </li>
+                  </ul>
+                  <ul class="tool">
+                    <li class="tl html">HTML</li>
+                    <li class="tl css">CSS</li>
+                    <li class="tl js">JS</li>
+                  </ul>
+                  <div class="pro_int">
+                    <p class="int_title">프로젝트 개요</p>
+                    <p class="int_desc">
+                      ‘술담화’는 전통주 정기 구독 서비스를 제공하고 스토어를
+                      통해 전통주를 판매합니다. 경쟁력 있는 서비스와는 별개로
+                      정리되지 않은 메뉴 구조, 복잡한 뎁스 구조와 반복된 정보
+                      전달, 사용자 편의를 고려하지 않은 레이아웃, 중요
+                      서비스(구독)에 대한 부족한 홍보 등이 아쉬웠고 리뉴얼을
+                      진행하게 되었습니다.
+                    </p>
+                    <p class="int_title">리뉴얼 포인트</p>
+                    <ul class="int_desc">
+                      <li>
+                        1. 레이아웃 재구성 - PC 화면 재구성 및 반응형 레이아웃
+                        제작
+                      </li>
+                      <li>
+                        2. 사용자 경험 재설계 - 반복된 정보 제거와 복잡한 뎁스
+                        구조 명료화
+                      </li>
+                      <li>
+                        3. 가독성 개선 - 중요도에 따라 섹션별 사이즈 조정, 탭
+                        메뉴 제작
+                      </li>
+                      <li>
+                        4. 브랜드 홍보 - 깔끔하고 강조된 타이포로 브랜드 이미지
+                        상기
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal_btn_set">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <img src="./img/close_btn.png" alt="close" />
+                  </button>
+                  <button id="link_btn">
+                    <a href="#"><img src="./img/github.png" alt="git" /></a>
+                  </button>
+                  <button id="link_btn">
+                    <a href="#"><img src="./img/figma.png" alt="figma" /></a>
+                  </button>
+                </div>
+              </div>
+              <div class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <p class="port_title mw">Portfolio</p>
         <div class="slider">
           <div class="slide-track">
@@ -172,7 +282,15 @@
         </div>
         <ul class="pf">
           <li class="sul">
-            <a href="#">술담화</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              술담화
+            </button>
+            <!-- <a href="#">술담화</a> -->
             <div class="port_desc">
               <p>구독서비스 사이트 리뉴얼</p>
               <span>#expo</span>
@@ -180,7 +298,15 @@
             </div>
           </li>
           <li class="illhwa">
-            <a href="#">Tokyo Inside;<br />우리들의 일화</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              일화
+            </button>
+            <!-- <a href="#">Tokyo Inside;<br />우리들의 일화</a> -->
             <div class="port_desc">
               <p>일본어 회화 학습 어플리케이션</p>
               <span>#expo</span>
@@ -204,6 +330,7 @@
             </div>
           </li>
         </ul>
+
         <div class="design_work">
           <div class="design_title mw">
             <p>그 외 디자인 작업물</p>
@@ -220,7 +347,9 @@
               <div class="swiper-slide">
                 <img src="./img/sticker_pack.png" alt="goods_flex" />
               </div>
-              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">
+                <img src="./img/poster_hanging.png" alt="poster_g" />
+              </div>
               <div class="swiper-slide">Slide 5</div>
               <div class="swiper-slide">Slide 6</div>
               <div class="swiper-slide">Slide 7</div>

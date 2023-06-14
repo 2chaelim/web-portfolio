@@ -256,6 +256,8 @@
 }
 
 /* sec_portfolio */
+/* modal */
+
 .sec_portfolio {
   padding-bottom: 3.75rem;
 }
@@ -275,9 +277,9 @@
   height: 500px;
   background-size: cover;
   /* filter: grayscale(100%); */
-  font-size: 3rem;
+  /* font-size: 3rem;
   font-family: var(--font_kr);
-  font-weight: 900;
+  font-weight: 900; */
   cursor: url(../img/cursor.png) 10 10, progress;
   position: relative;
 }
@@ -297,15 +299,25 @@
   left: 0;
   top: 0;
 }
-.pf li a {
+.pf li button {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: black;
+  font-size: 3rem;
+  font-family: var(--font_kr);
+  font-weight: 900;
+}
+/* .pf li a {
   cursor: url(../img/cursor.png) 10 10, progress;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.pf li:hover a {
+} */
+.pf li:hover button {
   opacity: 0;
 }
 .pf li:hover .port_desc {

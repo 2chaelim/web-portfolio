@@ -1,0 +1,166 @@
+@charset 'utf-8';
+
+@font-face {
+  font-family: "SUITE";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE.woff2")
+    format("woff2");
+  font-weight: normal;
+  /* 400, 500, 700 */
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap");
+
+:root {
+  --mx: 1200px;
+  --font_kr: "Noto Sans KR", sans-serif;
+  --font_eg: "SUITE";
+  --black: #000;
+  --white: #fff;
+  --gray_dark: #656565;
+  --gray_light: #d9d9d9;
+  --grid: #ededed;
+  --grid_text: #fafafa;
+  --gap_10: 10px;
+  --gap_20: 20px;
+  --gap_30: 30px;
+}
+
+/* .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #fff;
+  --bs-btn-disabled-border-color: transparent;
+} */
+.modal {
+  --bs-modal-width: 1500px;
+  --bs-modal-margin: 8.69rem;
+  --bs-modal-border-radius: 0;
+  position: relative;
+}
+.modal-header {
+  padding: 0;
+  height: 100%;
+  border-radius: 0;
+  align-items: flex-end;
+  border-bottom: none;
+}
+
+.modal_btn_set {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: -5%;
+}
+.modal_btn_set button {
+  border-radius: 50px;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 0;
+  /* background-repeat: no-repeat;
+  background-position: center; */
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+  border: none;
+  margin-bottom: 20px;
+}
+.modal-header .btn-close {
+  margin: 0;
+  background-color: var(--gray_dark);
+  margin-bottom: 20px;
+}
+#link_btn {
+  background-color: var(--white);
+}
+.title_img {
+  width: 80%;
+  padding-bottom: 60px;
+  padding-left: 50px;
+  background-image: url("../img/suldamhwa_mockup_1.png");
+}
+.title_img img {
+  width: 100%;
+}
+.title_img p {
+  font-family: var(--font_kr);
+  color: var(--white);
+}
+.title_img p:nth-child(1) {
+  font-size: 2rem;
+}
+.title_img p:nth-child(2) {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.int {
+  background-color: var(--black);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.pro_per {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3.75rem 0;
+}
+.pro_per li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 7%;
+}
+.pro_per li img {
+  width: 2rem;
+  height: 2rem;
+}
+.pro_per li span {
+  font-family: var(--font_kr);
+  font-size: 14px;
+  padding-top: 0.25rem;
+  color: var(--gray_dark);
+}
+.tool {
+  display: flex;
+  font-family: var(--font_eg);
+  color: var(--white);
+}
+.tl {
+  border-radius: 50px;
+  padding: 0.25rem 1rem;
+  margin-right: 0.5rem;
+}
+.tl.html {
+  background-color: #ab3f21;
+}
+.tl.css {
+  background-color: #165786;
+}
+.tl.js {
+  background-color: #b9a92c;
+}
+.pro_int {
+  padding-top: 20px;
+  font-family: var(--font_kr);
+  padding-bottom: 30px;
+  color: var(--white);
+}
+.int_title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+}
+.int_desc {
+  padding-left: 0.25rem;
+  padding-bottom: 30px;
+  line-height: 1.75rem;
+}
