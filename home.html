@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chaelim Portfolio</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="./css/my_reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/intro.css" />
@@ -22,11 +16,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
     <script src="/common.js" defer></script>
   </head>
   <body>
@@ -141,13 +130,7 @@
         </div>
       </section>
       <section class="sec_portfolio">
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
+        <div id="modal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -207,34 +190,96 @@
                   </div>
                 </div>
                 <div class="modal_btn_set">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  >
+                  <button id="modal_close">
                     <img src="./img/close_btn.png" alt="close" />
                   </button>
                   <button id="link_btn">
-                    <a href="#"><img src="./img/github.png" alt="git" /></a>
+                    <a href="#"
+                      ><img src="./img/github.png" alt="git" class="modal_git"
+                    /></a>
                   </button>
                   <button id="link_btn">
                     <a href="#"><img src="./img/figma.png" alt="figma" /></a>
                   </button>
                 </div>
               </div>
-              <div class="modal-body"></div>
+              <div class="modal-body">
+                <div class="detail1">
+                  <img
+                    class="detail_img"
+                    src="./img/sul_detail1.png"
+                    alt="detail_img"
+                  />
+                  <p class="detail_desc1">
+                    사이트를 요약하는 메인 배너와 한눈에 볼 수 있는 주요 제공
+                    서비스
+                  </p>
+                </div>
+                <div class="detail2">
+                  <img
+                    class="detail_img2"
+                    src="./img/sul_detail2.png"
+                    alt="detail_img"
+                  />
+                  <p class="detail_desc2">
+                    주종별 카테고리에 바로 접근할 수 있는 메뉴 구성과 구독 관련
+                    리뷰 슬라이드 영역
+                  </p>
+                </div>
+                <div class="mobile_slider">
+                  <div class="mobile-track">
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile1.png" alt="sul_mobile1" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile2.png" alt="sul_mobile2" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile1.png" alt="sul_mobile1" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile2.png" alt="sul_mobile2" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile1.png" alt="sul_mobile1" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile2.png" alt="sul_mobile2" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile1.png" alt="sul_mobile1" />
+                    </div>
+                    <div class="mobile_slide">
+                      <img src="./img/sul_mobile2.png" alt="sul_mobile2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="design">
+                  <p class="system_title">Design System</p>
+                  <p class="system_desc">
+                    전통주 구독이라는 컨텐츠에 집중하여 술의 이미지와 색상, 관련
+                    리뷰를 강조하기 위해 포인트 컬러 외에 black, gray, white를
+                    메인 색상으로 하였습니다. 또한 여러가지 이미지가 많이
+                    사용되는 마켓 사이트라는 점을 고려하여 과한 애니메이션과
+                    이펙트 효과를 줄이고 깔끔한 느낌을 줄 수 있도록 디자인
+                    했습니다.
+                  </p>
+                  <ul class="typo">
+                    <li>
+                      <div>
+                        <span class="typo_num">01.</span>
+                        <p class="type bold">
+                          Noto Sans KR<span class="typo_weight">Bold</span>
+                        </p>
+                      </div>
+                      <span class="ex bold">Aa</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
+                <button>prev</button>
+                <button>next</button>
               </div>
             </div>
           </div>
