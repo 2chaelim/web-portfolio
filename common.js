@@ -1,3 +1,4 @@
+// main_bg_ani
 const main_bg = document.querySelector(".main_bg");
 const hd = document.querySelector(".hd");
 const main = document.querySelector(".main");
@@ -13,6 +14,7 @@ setTimeout(() => {
   hd.classList.add("on");
 }, 4500);
 
+// color_picker
 let color_picker = document.getElementById("color_picker");
 function changeTextColor() {
   const text_color1 = document.getElementById("text_color1");
@@ -25,6 +27,7 @@ function changeTextColor() {
 }
 color_picker.addEventListener("input", changeTextColor);
 
+// swiper
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
   spaceBetween: 20,
@@ -34,4 +37,17 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-myModal.handleUpdate();
+// modal
+const modal = document.getElementById('modal')
+const modal_open = document.getElementById('open')
+const modal_close = document.getElementById('modal_close')
+
+modal_open.addEventListener('click', ()=>{
+  modal.style.display = 'block'
+  document.body.style.overflow='hidden'
+})
+modal_close.addEventListener('click', ()=>{
+  modal.style.display='none'
+  document.body.style.overflow='auto'
+})
+

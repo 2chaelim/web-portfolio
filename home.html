@@ -274,12 +274,58 @@
                       </div>
                       <span class="ex bold">Aa</span>
                     </li>
+                    <li>
+                      <div>
+                        <span class="typo_num">02.</span>
+                        <p class="type medium">
+                          Noto Sans KR<span class="typo_weight">Medium</span>
+                        </p>
+                      </div>
+                      <span class="ex medium">Aa</span>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="typo_num">03.</span>
+                        <p class="type regular">
+                          Noto Sans KR<span class="typo_weight">Regular</span>
+                        </p>
+                      </div>
+                      <span class="ex regular">Aa</span>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="typo_num">04.</span>
+                        <p class="type light">
+                          Noto Sans KR<span class="typo_weight">Light</span>
+                        </p>
+                      </div>
+                      <span class="ex light">Aa</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="colors">
+                  <ul class="colors_r">
+                    <li>#333333</li>
+                    <li>#AAAAAA</li>
+                    <li>#F8F8F8</li>
+                    <li>#FFFFFF</li>
+                  </ul>
+                  <ul class="colors_l">
+                    <li>#1B5EC7</li>
+                    <li>#F4BB5F</li>
+                    <li>#FF6565</li>
                   </ul>
                 </div>
               </div>
               <div class="modal-footer">
-                <button>prev</button>
-                <button>next</button>
+                <button>
+                  <img src="./img/modal_prev.png" alt="prev">
+                  <span>prev</span>
+                </button>
+                <button>
+                  <span>next</span>
+                  <img src="./img/modal_next.png" alt="next">
+                </button>
               </div>
             </div>
           </div>
@@ -328,10 +374,8 @@
         <ul class="pf">
           <li class="sul">
             <button
-              type="button"
+              id="open"
               class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
             >
               술담화
             </button>
@@ -344,10 +388,8 @@
           </li>
           <li class="illhwa">
             <button
-              type="button"
+              id="open"
               class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
             >
               일화
             </button>
@@ -359,7 +401,12 @@
             </div>
           </li>
           <li class="mapsmart">
-            <a href="#">MAPSMART</a>
+            <button
+            id="open"
+            class="btn btn-primary"
+          >
+            MAPSMART
+          </button>
             <div class="port_desc">
               <p>[chatGPT] 장소 추천 서비스 앱</p>
               <span>#expo</span>
@@ -367,7 +414,12 @@
             </div>
           </li>
           <li class="daejeon">
-            <a href="#">대전시민천문대</a>
+            <button
+            id="open"
+            class="btn btn-primary"
+          >
+            대전시민천문대
+          </button>
             <div class="port_desc">
               <p>대전시민천문대 사이트 리뉴얼</p>
               <span>#expo</span>
