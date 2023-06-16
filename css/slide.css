@@ -7,7 +7,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 6));
+    transform: translateX(calc(-200px * 6));
   }
 }
 
@@ -16,7 +16,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 6));
+    transform: translateX(calc(-200px * 2));
   }
 }
 .slider {
@@ -45,17 +45,16 @@
   top: 0;
 }
 .slider .slide-track {
-  /* -webkit-animation: scroll 25s linear infinite;
-  animation: scroll 25s linear infinite; */
   animation-name: scroll;
-  animation-duration: 25s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   display: flex;
-  width: calc(250px * 12);
+  width: calc(200px * 12);
 }
 .slider .slide {
-  padding: 1rem 2rem;
+  width: 250px;
+  padding: 1rem 0;
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   color: #656565;

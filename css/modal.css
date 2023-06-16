@@ -13,7 +13,7 @@
 :root {
   --mx: 1200px;
   --font_kr: "Noto Sans KR", sans-serif;
-  --font_eg: "SUITE";
+  --font_eg: "'SUITE', sans-serif";
   --black: #000;
   --white: #fff;
   --detail_black: #2f2f2f;
@@ -46,7 +46,7 @@
 }
 .title_img {
   width: 40%;
-  background-image: url(../img/suldamhwa_mockup_1_black.png);
+  background-image: url(../img/sul_mockup_black.jpg);
   background-size: cover;
   background-position-x: 50%;
   display: flex;
@@ -218,14 +218,14 @@
   flex-direction: column;
   align-items: flex-end;
 }
-.typo li { 
+.typo li {
   width: 62.5%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 3.125rem;
 }
-.typo li:last-child{
+.typo li:last-child {
   padding-bottom: 0;
 }
 .typo_num {
@@ -238,14 +238,14 @@
 .type.bold {
   font-weight: 700;
 }
-.type.medium{
+.type.medium {
   font-weight: 400;
 }
-.type.light{
+.type.light {
   font-size: 300;
 }
 .typo_weight {
-  font-family: var(--font_eg); 
+  font-family: var(--font_eg);
   font-size: 1rem;
   color: var(--gray_dark);
   padding-left: 1rem;
@@ -259,16 +259,18 @@
   font-weight: 700;
 }
 .colors {
-padding: 6.25rem 9.375rem;
+  padding: 6.25rem 9.375rem;
   display: flex;
   justify-content: space-between;
   color: var(--white);
   font-family: var(--font_eg);
 }
-.colors_r, .colors_l {
+.colors_r,
+.colors_l {
   display: flex;
 }
-.colors_r li, .colors_l li {
+.colors_r li,
+.colors_l li {
   width: 7.5rem;
   height: 7.5rem;
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -326,9 +328,9 @@ padding: 6.25rem 9.375rem;
   font-family: var(--font_eg);
   font-size: 2rem;
 }
-.modal-footer button:first-child span{
+.modal-footer button:first-child span {
   padding-left: 1.875rem;
 }
-.modal-footer button:last-child span{
+.modal-footer button:last-child span {
   padding-right: 1.875rem;
 }

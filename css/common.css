@@ -1,20 +1,11 @@
 @charset 'utf-8';
 
-/* font-family */
-@font-face {
-  font-family: "SUITE";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE.woff2")
-    format("woff2");
-  font-weight: normal;
-  /* 400, 500, 700 */
-  font-style: normal;
-}
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap");
 
 :root {
   --mx: 1200px;
   --font_kr: "Noto Sans KR", sans-serif;
-  --font_eg: "SUITE";
+  --font_eg: "'SUITE', sans-serif";
   --black: #000;
   --white: #fff;
   --gray_dark: #656565;
@@ -36,6 +27,12 @@
 }
 
 /* header */
+.sections {
+  display: none;
+}
+.sections.on {
+  display: block;
+}
 .sec_home {
   height: 100vh;
   position: relative;
@@ -46,10 +43,10 @@
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  /* position: fixed;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(250, 250, 250, 0.5); */
+  z-index: 1000;
 }
 .hd.on {
   opacity: 1;
@@ -88,7 +85,7 @@
 /* main */
 .main {
   padding: 10rem 0;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .main.on {
   opacity: 1;
@@ -256,39 +253,39 @@
 }
 
 /* sec_portfolio */
-/* modal */
-
 .sec_portfolio {
-  padding-bottom: 3.75rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.pf_title_wrap {
+  padding-top: 5rem;
 }
 .port_title {
   font-family: var(--font_eg);
   font-size: 3rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
-  padding-top: 5rem;
 }
 .pf {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
 }
 .pf li {
   width: 50%;
-  height: 500px;
+  height: 50%;
   background-size: cover;
-  /* filter: grayscale(100%); */
-  /* font-size: 3rem;
-  font-family: var(--font_kr);
-  font-weight: 900; */
-  cursor: url(../img/cursor.png) 10 10, progress;
+  /* cursor: url(../img/cursor.png) 10 10, progress; */
   position: relative;
+  overflow: hidden;
 }
 .pf li:hover {
   filter: none;
 }
 .pf li:hover::before {
-  height: 20%;
-  transition: 0.4s;
+  height: 0;
+  transition: 0.5s;
 }
 .pf li::before {
   content: "";
@@ -300,7 +297,7 @@
   top: 0;
 }
 .pf li button {
-  border: 1px solid red;
+  border: none;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -308,9 +305,10 @@
   font-size: 3rem;
   font-family: var(--font_kr);
   font-weight: 900;
+  /* cursor: url(../img/cursor.png) 10 10, progress; */
 }
 /* .pf li a {
-  cursor: url(../img/cursor.png) 10 10, progress;
+ 
   width: 100%;
   height: 100%;
   display: flex;
@@ -321,20 +319,21 @@
   opacity: 0;
 }
 .pf li:hover .port_desc {
-  opacity: 1;
-  transition: 0.4s;
+  top: 0;
+  transition: 0.5s;
 }
 .port_desc {
   position: absolute;
-  top: 0;
-  font-size: 2rem;
+  top: 100%;
+  font-size: 1.75rem;
   font-family: var(--font_kr);
   color: var(--white);
   z-index: 20;
   font-weight: 400;
   display: flex;
-  padding: 1.5rem;
-  opacity: 0;
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
 }
 .port_desc p {
   padding-right: 1rem;
@@ -353,25 +352,26 @@
   padding: 0 1.25rem;
 }
 .sul {
-  background-image: url("../img/suldamhwa_mockup_1.png");
+  background-image: url("../img/sul_mockup.jpg");
 }
 
 .illhwa {
-  background-image: url("../img/illhwa_mockup_1.png");
+  background-image: url("../img/illhwa_mockup.jpg");
   background-position-y: 50%;
 }
 
 .mapsmart {
-  background-image: url("../img/gpt_mockup_1.png");
+  background-image: url("../img/gpt_mockup.jpg");
   background-position-y: 50%;
 }
 .daejeon {
-  background-image: url("../img/daejeon_mockup_1.png");
+  background-image: url("../img/daejeon_mockup.jpg");
   background-position-y: 20%;
 }
 
 .design_work {
   position: relative;
+  padding-bottom: 3.75rem;
 }
 .design_title {
   font-family: var(--font_kr);
@@ -389,7 +389,7 @@
   width: calc(100% - 0.5rem);
   margin: auto;
   margin-right: 0;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
 }
 .swiper-slide {
@@ -407,10 +407,10 @@
   object-fit: cover;
 }
 .swiper-slide:nth-child(2n) {
-  width: 320px;
+  width: 300px;
 }
 .swiper-slide:nth-child(2n-1) {
-  width: 320px;
+  width: 300px;
 }
 .next,
 .prev {
@@ -432,8 +432,13 @@
 }
 
 /* footer */
-.ft {
+.section_last {
   padding-top: 3.75rem;
+  position: relative;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.contact {
   background-color: var(--black);
   color: var(--white);
   position: relative;
@@ -442,6 +447,7 @@
   font-family: var(--font_eg);
   font-size: 3rem;
   font-weight: 700;
+  padding-top: 3.75rem;
   padding-bottom: 1.75rem;
 }
 .contact_con_li {
