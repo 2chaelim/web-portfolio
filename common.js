@@ -2,7 +2,7 @@
 const main_bg = document.querySelector(".main_bg");
 const hd = document.querySelector(".hd");
 const sections = document.querySelector(".sections");
-const main_typo = document.querySelector(".main_typo");
+const typo_ani = document.getElementById('text_color2')
 
 setTimeout(() => {
   main_bg.classList.add("hidden");
@@ -12,13 +12,13 @@ setTimeout(() => {
 }, 4500);
 setTimeout(() => {
   sections.classList.add("on");
-  main_typo.classList.add("on");
-}, 5000);
+}, 5500);
+setTimeout(() => {
+  typo_ani.classList.add('on')
+}, 6000);
 
 // scroll event
 const $sections = document.querySelectorAll(".sections > *");
-// $sections 영역에서 mousewheel 이벤트가 발생하면
-// 한 section의 높이만큼 이동
 if (window.innerWidth > 600) {
   $sections.forEach((section) => {
     section.addEventListener("mousewheel", (e) => {
@@ -34,6 +34,17 @@ if (window.innerWidth > 600) {
     });
   });
 }
+
+// gotop
+let gotop = document.querySelector(".gotop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= window.innerHeight * 0.5) {
+    gotop.classList.add("on");
+  }  else {
+    gotop.classList.remove("on");
+  }
+});
 
 // color_picker
 let color_picker = document.getElementById("color_picker");
@@ -59,15 +70,26 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // modal
-const modal = document.getElementById("modal");
-const modal_open = document.getElementById("open");
-const modal_close = document.getElementById("modal_close");
+const modal_open = document.querySelectorAll(".open");
+const modal_close = document.querySelectorAll(".close");
+let scrollPosition = 0;
 
-modal_open.addEventListener("click", () => {
-  modal.style.display = "block";
-  document.body.style.overflow = "hidden";
-});
-modal_close.addEventListener("click", () => {
-  modal.style.display = "none";
-  document.body.style.overflow = "auto";
-});
+modal_open.forEach((button)=>{
+  button.addEventListener('click', ()=>{
+    const modal_id = button.id.replace('open', 'modal')
+    const modal = document.getElementById(modal_id)
+    scrollPosition = window.scrollY;
+    modal.style.display ='block'
+    document.body.style.cssText =`overflow: hidden; position : fixed; top : -${window.scrollY}px;`
+  })
+})
+
+modal_close.forEach((button)=>{
+  button.addEventListener('click', ()=>{
+   const modal_id = button.id.replace('close', 'modal')
+   const modal = document.getElementById(modal_id)
+    document.body.style.cssText ='';
+    window.scrollTo(0, scrollPosition);
+    modal.style.display = 'none'
+  })
+})

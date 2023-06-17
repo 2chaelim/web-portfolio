@@ -72,7 +72,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 8));
+    transform: translateX(calc(-250px * 4));
   }
 }
 
@@ -81,7 +81,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 8));
+    transform: translateX(calc(-250px * 2));
   }
 }
 .mobile_slider {
@@ -110,7 +110,7 @@
 }
 .mobile_slider .mobile-track {
   animation-name: mobile_scroll;
-  animation-duration: 25s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   display: flex;
