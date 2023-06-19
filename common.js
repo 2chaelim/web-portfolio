@@ -97,3 +97,5 @@ modal_close.forEach((button) => {
     modal.style.display = "none";
   });
 });
+
+// 주석
