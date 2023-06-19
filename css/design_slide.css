@@ -1,0 +1,119 @@
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap");
+
+:root {
+  --mx: 1200px;
+  --font_kr: "Noto Sans KR", sans-serif;
+  --font_eg: "'SUITE', sans-serif";
+  --black: #000;
+  --white: #fff;
+  --gray_dark: #656565;
+  --gray_light: #d9d9d9;
+  --grid: #ededed;
+  --grid_text: #fafafa;
+  --gap_10: 10px;
+  --gap_20: 20px;
+  --gap_30: 30px;
+}
+
+.swiper.mySwiper {
+  max-width: 1560px;
+  width: calc(100% - 0.5rem);
+  margin: auto;
+  margin-right: 0;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: #f6f6f6;
+  position: relative;
+  overflow: hidden;
+}
+.swiper-slide::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.swiper-slide:hover::after {
+  opacity: 1;
+  transition: 0.4s;
+}
+.swiper-slide:hover img {
+  object-position: center;
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.design_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--white);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-variant: var(--font_kr);
+  font-size: 18px;
+  padding: 1rem;
+  opacity: 0;
+}
+.swiper-slide:hover .design_text {
+  opacity: 1;
+  transition: 0.4s;
+}
+.des_title {
+  font-family: var(--font_eg);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.des_text {
+  display: flex;
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+}
+.des_text span {
+  width: 16%;
+  font-weight: 600;
+}
+.des_text p {
+  width: 84%;
+}
+.swiper-slide:nth-child(2n) {
+  width: 300px;
+}
+.swiper-slide:nth-child(2n-1) {
+  width: 300px;
+}
+.next,
+.prev {
+  position: absolute;
+  top: 12% !important;
+  color: transparent !important;
+  height: 1.25rem !important;
+}
+.next {
+  left: 95% !important;
+}
+.prev {
+  left: 93% !important;
+}
+.next img,
+.prev img {
+  width: 100%;
+  height: 100%;
+}

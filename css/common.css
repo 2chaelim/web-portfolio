@@ -40,22 +40,27 @@ html {
   left: 94%;
   z-index: 200;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
-.gotop.on{
+.gotop.on {
   opacity: 1;
 }
 .sections {
-  opacity: 0;
+  display: none;
 }
 .sections.on {
-  opacity: 1;
-  transition: .3s;
+  display: block;
 }
 .sec_home {
   height: 100vh;
-
   position: relative;
+}
+.main_con {
+  opacity: 0;
+}
+.main_con.on {
+  opacity: 1;
+  transition: 0.5s;
 }
 .hd {
   width: 100%;
@@ -130,16 +135,21 @@ html {
 #text_color2.on {
   margin-left: 0;
   opacity: 1;
-  transition: .5s;
+  transition: 0.5s;
   animation: typo_ani 2s;
   animation-iteration-count: 1;
 }
 #text_color2.on #typo_ani {
-  animation:  reveal 2s ;
+  animation: reveal 2s;
 }
 @keyframes reveal {
-  0% {opacity:0}
-  100% {opacity:1;display: inline-flex;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: inline-flex;
+  }
 }
 @keyframes typo_ani {
   from {
@@ -363,9 +373,9 @@ html {
 }
 .pf li:hover::before {
   animation-name: pf_ani;
-animation-duration: 0.5s;
-animation-timing-function: ease-in;
-animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
   height: 0;
   transition: 0.5s;
 }
@@ -454,52 +464,7 @@ animation-iteration-count: 1;
 .design_title img {
   padding-left: 0.75rem;
 }
-.swiper.mySwiper {
-  max-width: 1560px;
-  width: calc(100% - 0.5rem);
-  margin: auto;
-  margin-right: 0;
-  height: 300px;
-  overflow: hidden;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.swiper-slide:nth-child(2n) {
-  width: 300px;
-}
-.swiper-slide:nth-child(2n-1) {
-  width: 300px;
-}
-.next,
-.prev {
-  position: absolute;
-  top: 12% !important;
-  color: transparent !important;
-  height: 1.25rem !important;
-}
-.next {
-  left: 95% !important;
-}
-.prev {
-  left: 93% !important;
-}
-.next img,
-.prev img {
-  width: 100%;
-  height: 100%;
-}
+
 .contact {
   background-color: var(--black);
   color: var(--white);
@@ -555,7 +520,7 @@ animation-iteration-count: 1;
   width: 80%;
 }
 .copy {
-  padding: 3.75rem 0;
+  padding: 4rem 0;
   font-family: var(--font_kr);
   font-size: 14px;
   color: #cacaca;
@@ -615,4 +580,7 @@ animation-iteration-count: 1;
   position: absolute;
   top: 75%;
   left: -0.5%;
+}
+
+@media (max-width: 650px) {
 }

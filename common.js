@@ -2,7 +2,8 @@
 const main_bg = document.querySelector(".main_bg");
 const hd = document.querySelector(".hd");
 const sections = document.querySelector(".sections");
-const typo_ani = document.getElementById('text_color2')
+const typo_ani = document.getElementById("text_color2");
+const main_typo = document.querySelector(".main_con");
 
 setTimeout(() => {
   main_bg.classList.add("hidden");
@@ -14,7 +15,10 @@ setTimeout(() => {
   sections.classList.add("on");
 }, 5500);
 setTimeout(() => {
-  typo_ani.classList.add('on')
+  main_typo.classList.add("on");
+}, 5500);
+setTimeout(() => {
+  typo_ani.classList.add("on");
 }, 6000);
 
 // scroll event
@@ -41,7 +45,7 @@ let gotop = document.querySelector(".gotop");
 window.addEventListener("scroll", () => {
   if (window.scrollY >= window.innerHeight * 0.5) {
     gotop.classList.add("on");
-  }  else {
+  } else {
     gotop.classList.remove("on");
   }
 });
@@ -74,22 +78,22 @@ const modal_open = document.querySelectorAll(".open");
 const modal_close = document.querySelectorAll(".close");
 let scrollPosition = 0;
 
-modal_open.forEach((button)=>{
-  button.addEventListener('click', ()=>{
-    const modal_id = button.id.replace('open', 'modal')
-    const modal = document.getElementById(modal_id)
+modal_open.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal_id = button.id.replace("open", "modal");
+    const modal = document.getElementById(modal_id);
     scrollPosition = window.scrollY;
-    modal.style.display ='block'
-    document.body.style.cssText =`overflow: hidden; position : fixed; top : -${window.scrollY}px;`
-  })
-})
+    modal.style.display = "block";
+    document.body.style.cssText = `overflow: hidden; position : fixed; top : -${window.scrollY}px;`;
+  });
+});
 
-modal_close.forEach((button)=>{
-  button.addEventListener('click', ()=>{
-   const modal_id = button.id.replace('close', 'modal')
-   const modal = document.getElementById(modal_id)
-    document.body.style.cssText ='';
+modal_close.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal_id = button.id.replace("close", "modal");
+    const modal = document.getElementById(modal_id);
+    document.body.style.cssText = "";
     window.scrollTo(0, scrollPosition);
-    modal.style.display = 'none'
-  })
-})
+    modal.style.display = "none";
+  });
+});
