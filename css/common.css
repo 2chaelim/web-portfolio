@@ -21,8 +21,8 @@ html {
 }
 .wrapper {
   overflow: hidden;
-  max-width: 1920px;
-  margin: auto;
+  /* max-width: 1920px;
+  margin: auto; */
 }
 .mw {
   max-width: var(--mx);
